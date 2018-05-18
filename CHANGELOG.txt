@@ -1,0 +1,5 @@
+JBWeblinks 3.0.0 (18-05-2018)
+================================================================================
++ Initiation the module in November 2011
++ Add in Github
++ Display component 'com_weblinks'

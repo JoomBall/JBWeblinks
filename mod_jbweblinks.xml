@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	
+	<name>mod_jbweblinks</name>
+	<author>JoomBall! Project</author>
+	<creationDate>November 2011</creationDate>
+	<copyright>JoomBall! Project</copyright>
+	<license>GNU/GPL 3 http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>info@joomball.com</authorEmail>
+	<authorUrl>www.joomball.com</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_JBWEBLINKS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jbweblinks">mod_jbweblinks.php</filename>
+		<filename>CHANGELOG.txt</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jbweblinks.xml</filename>
+		<folder>assets</folder>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_WEBLINKS" />
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jbweblinks/fields">
+			
+				<field
+					name="lang"
+					type="jblang" />
+					
+				<field
+					name="header"
+					type="jbheader"
+					pagetitle="JBWeblinks"
+					path="../modules/mod_jbweblinks/assets/images/"
+					icon_48="icon-48-jbweblinks"
+					es_category="es/11-jbweblinks"
+					en_category="en/13-jbweblinks"
+					es_help="es/1-video-tutorial-y-documentacion-para-jbweblinks"
+					en_help="en/2-video-tutorial-and-documentation-to-jbweblinks"
+					extension="http://extensions.joomla.org/extensions/directory-a-documentation/weblinks/21303" />
+					
+				<field
+					name="version_msg"
+					type="jbmessage"
+					message="version"
+					path="../modules/mod_jbweblinks/"
+					xml="mod_jbweblinks.xml"
+					extension_name="mod_jbweblinks" />
+					
+				<field
+					name="information_msg"
+					type="jbmessage"
+					message="info"
+					label="MOD_JBWEBLINKS_MSG_INFORMATION" />
+				
+				<field
+                    name="options_basic_msg"
+                    type="jbmessage"
+					message="space"
+					label="MOD_JBWEBLINKS_MSG_OPTIONS_BASIC" />
+                    
+				<field
+					name="style_css"
+					type="list"
+					default="1"
+					label="MOD_JBWEBLINKS_FIELD_STYLECSS_LABEL"
+					description="MOD_JBWEBLINKS_FIELD_STYLECSS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="catid"
+					type="category"
+					extension="com_weblinks"
+					label="JCATEGORY"
+					multiple="true" size="5"
+					default=""
+					description="MOD_JBWEBLINKS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				
+				<field
+					name="view_link"
+					type="radio"
+					default="0"
+					class="btn-group"
+					label="MOD_JBWEBLINKS_FIELD_VIEW_LINK_LABEL"
+					description="MOD_JBWEBLINKS_FIELD_VIEW_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+                    name="options_basic_joomla_msg"
+                    type="jbmessage"
+                    message="space"
+                    label="MOD_JBWEBLINKS_MSG_OPTIONS_BASIC_JOOMLA" />
+                    
+                   <field
+					name="count"
+					type="text"
+					default="10"
+					size="35"
+					label="MOD_WEBLINKS_FIELD_COUNT_LABEL"
+					description="MOD_WEBLINKS_FIELD_COUNT_DESC" />
+				
+				<field
+					name="ordering"
+					type="list"
+					default="title"
+					label="MOD_WEBLINKS_FIELD_ORDERING_LABEL"
+					description="MOD_WEBLINKS_FIELD_ORDERING_DESC">
+					<option
+						value="title">JGLOBAL_TITLE</option>
+					<option
+						value="order">MOD_WEBLINKS_FIELD_VALUE_ORDER</option>
+					<option
+						value="hits">MOD_WEBLINKS_FIELD_VALUE_HITS</option>
+				</field>
+				
+				<field
+					name="direction"
+					type="list"
+					default="asc"
+					label="MOD_WEBLINKS_FIELD_ORDERDIRECTION_LABEL"
+					description="MOD_WEBLINKS_FIELD_ORDERDIRECTION_DESC">
+					<option
+						value="asc">MOD_WEBLINKS_FIELD_VALUE_ASCENDING</option>
+					<option
+						value="desc">MOD_WEBLINKS_FIELD_VALUE_DESCENDING</option>
+				</field>
+			
+				<field
+					name="target"
+					type="list"
+					default="1"
+					label="MOD_WEBLINKS_FIELD_TARGET_LABEL"
+					description="MOD_WEBLINKS_FIELD_TARGET_DESC">
+					<option
+						value="1">JBROWSERTARGET_NEW</option>
+					<option
+						value="2">JBROWSERTARGET_POPUP</option>
+					<option
+						value="3">JBROWSERTARGET_PARENT</option>
+				</field>
+			
+				<field
+					name="follow"
+					type="radio"
+					default="0"
+					class="btn-group"
+					label="MOD_WEBLINKS_FIELD_FOLLOW_LABEL"
+					description="MOD_WEBLINKS_FIELD_FOLLOW_DESC">
+					<option
+						value="follow">MOD_WEBLINKS_FIELD_VALUE_FOLLOW</option>
+					<option
+						value="no follow">MOD_WEBLINKS_FIELD_VALUE_NOFOLLOW</option>
+				</field>
+			
+				<field
+					name="description"
+					type="radio"
+					default="1"
+					class="btn-group"
+					label="MOD_WEBLINKS_FIELD_DESCRIPTION_LABEL"
+					description="MOD_WEBLINKS_FIELD_DESCRIPTION_DESC">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				
+				<field
+					name="hits"
+					type="radio"
+					default="0"
+					class="btn-group"
+					label="MOD_WEBLINKS_FIELD_HITS_LABEL"
+					description="MOD_WEBLINKS_FIELD_HITS_DESC">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+
+				<field
+					name="count_clicks"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_WEBLINKS_FIELD_COUNTCLICKS_LABEL"
+					description="MOD_WEBLINKS_FIELD_COUNTCLICKS_DESC">
+						<option
+						value="">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+	<!-- Update servers -->
+	<updateservers>
+		<server type="extension" priority="1" element="mod_jbweblinks" name="JBWeblinks">http://www.joomball.com/images/updates/jbweblinks.xml</server>
+	</updateservers>
+	
+</extension>

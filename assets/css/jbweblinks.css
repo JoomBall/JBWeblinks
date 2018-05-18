@@ -1,0 +1,48 @@
+/*
+ * @author			JoomBall! Project
+ * @link			http://www.joomball.com
+ * @copyright		Copyright © 2012 JoomBall! Project All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+/* ++++++++++++++  weblinks  ++++++++++++++ */
+/* ESTIL PER A WEBLINKS */
+ul.weblinks, ul.weblinks li ul, ul.weblinks_grey, ul.weblinks_grey li ul {
+	margin: 0 5px !important;
+	padding: 0 0 5px 0 !important;
+}
+
+ul.weblinks li, ul.weblinks_grey li {
+	font-style: italic;
+	font-size: 1.2em;
+	color: #000000;
+	list-style-type: none;
+}
+
+ul.weblinks li ul li, ul.weblinks_grey li ul li {
+	font-style: normal;
+	font-size: .8em;
+	color: #000000;
+	padding: 2px 0;
+	border-bottom: dashed 1px #aaaaaa;
+}
+
+ul.weblinks li ul li p, ul.weblinks_grey li ul li p {
+	font-size: 0.78em;
+	margin: 2px;
+}
+
+ul.weblinks li ul li span, ul.weblinks_grey li ul li span {
+	padding-left: 4px;
+	color: #808080;
+}
+
+#jbweblinks ul.menu {
+	border: none;
+	background: none;
+}
+
+#jbweblinks ul.menu li a {
+	font-style: normal;
+	font-size: 1.0em;
+}
